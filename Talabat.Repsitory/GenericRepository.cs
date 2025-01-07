@@ -38,8 +38,6 @@ namespace Talabat.Repsitory
         {
             // search DB for the id
             //return await _dbContext.Set<T>().Where(x => x.Id == id).FirstOrDefaultAsync(); 
-
-
             return await _dbContext.Set<T>().FindAsync(id);
         }
     }
