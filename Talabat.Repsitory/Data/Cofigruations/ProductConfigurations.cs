@@ -24,6 +24,7 @@ namespace Talabat.Repsitory.Data.Cofigruations
             builder.HasOne(P => P.ProductType)
                    .WithMany()
                    .HasForeignKey(P => P.ProductTypeId);
+                  
 
 
             //proroity of the configurations [required]

@@ -58,7 +58,7 @@ namespace Talabat.Repsitory.Data
             {
 
 
-                var ProductData = File.ReadAllText("../Talabat.Repsitory/Data/DataSeed/types.json");
+                var ProductData = File.ReadAllText("../Talabat.Repsitory/Data/DataSeed/products.json");
                 var Products = JsonSerializer.Deserialize<List<Product>>(ProductData);
 
                 if (Products?.Count > 0)
