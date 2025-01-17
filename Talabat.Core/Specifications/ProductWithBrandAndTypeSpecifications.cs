@@ -9,11 +9,21 @@ namespace Talabat.Core.Specifications
 {
     public class ProductWithBrandAndTypeSpecifications : BaseSpecifications<Product>
     {
+       // constructor used in GET ALL Products 
         public ProductWithBrandAndTypeSpecifications():base()
         {
             Includes.Add(P => P.ProductType);
             Includes.Add(P => P.ProductBrand);
             
+        }
+
+        // constructor used in GET Product By Id 
+
+        public ProductWithBrandAndTypeSpecifications(int id) : base( P => P.Id == id)
+        {
+            Includes.Add(P => P.ProductType);
+            Includes.Add(P => P.ProductBrand);
+
         }
     }
 }
